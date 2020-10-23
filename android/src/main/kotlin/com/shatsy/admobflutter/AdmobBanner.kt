@@ -33,6 +33,9 @@ class AdmobBanner(context: Context, messenger: BinaryMessenger, id: Int, args: H
       adRequestBuilder.addNetworkExtrasBundle(AdMobAdapter::class.java, extras)
     }
 
+    adView.setLayerType(View.LAYER_TYPE_HARDWARE, null);
+    adView.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+
     adView.loadAd(adRequestBuilder.build())
   }
 
